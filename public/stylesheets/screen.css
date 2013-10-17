@@ -76,12 +76,13 @@ body {
 /* line 11, ../sass/screen.scss */
 input {
   font-size: 1em;
-  width: 100%;
+  width: 90%;
   text-align: center;
 }
 
 /* line 17, ../sass/screen.scss */
 div[role="main"] {
-  width: 5em;
+  width: 100%;
+  max-width: 5em;
   margin: 0 auto;
 }

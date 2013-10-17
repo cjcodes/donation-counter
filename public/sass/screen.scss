@@ -10,11 +10,12 @@ body {
 }
 input {
   font-size: 1em;
-  width: 100%;
+  width: 90%;
   text-align: center;
 }
 
 div[role="main"] {
-  width: 5em;
+  width: 100%;
+  max-width: 5em;
   margin: 0 auto;
 }

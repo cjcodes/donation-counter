@@ -55,11 +55,11 @@ if ('development' == app.get('env')) {
 /**
  * Routing
  */
-var io = {};
-routes.init(app, {io: io});
+var includes = {io: {}};
+routes.init(app, includes);
 
 var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
-io.sockets = require('./lib/socket')(server, app.models).sockets;
+includes.io = require('./lib/socket')(server, app.models);

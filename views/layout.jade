@@ -3,7 +3,9 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/screen.css', media='screen, projection', type='text/css')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
   body
     div(role="main")
       block content
       block javascripts
+        script(type='text/javascript', src='/javascripts/require.js', data-main='/javascripts/app.js')

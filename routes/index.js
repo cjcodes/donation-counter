@@ -15,10 +15,12 @@ module.exports = {
       routes[this.routes[i]] = require('./' + this.routes[i])(this.includes);
     }
 
-    app.get('/field/:id',  routes.event.get);
-    app.post('/field/:id', routes.event.post);
+    app.get('/event/:id/field',   routes.field.get);
+    app.post('/event/:id/field',  routes.field.post);
+
+    app.get('/event/:id/present', routes.present.get);
   },
 
-  routes: ['event']
+  routes: ['field', 'present']
 };
 

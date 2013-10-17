@@ -11,6 +11,7 @@
     "node-compass": "*",
     "socket.io": "*",
     "mysql": "*",
-    "orm": "*"
+    "orm": "*",
+    "numeral": "*"
   }
 }
