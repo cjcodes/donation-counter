@@ -5,6 +5,10 @@ module.exports = function (includes) {
       var id = req.params.id;
 
       req.models.event.get(id, function (err, event) {
+        if (err) {
+          res.status(404).send('Not found');
+          return;
+        }
         res.render('field', { title: event.name });
       });
     },
