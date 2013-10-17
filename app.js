@@ -9,6 +9,7 @@ var routes = require('./routes');
 var http = require('http');
 var path = require('path');
 var compass = require('node-compass');
+var config = require('./config');
 
 
 /**
@@ -17,7 +18,7 @@ var compass = require('node-compass');
 var app = express();
 
 // set stuff
-app.set('port', process.env.PORT || 3000);
+app.set('port', config.port);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -30,7 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // configure ORM and models
 app.models = {};
-app.use(orm.express('mysql://root:@localhost/node', {
+var dbString = 'mysql://'+config.db.user+':'+config.db.pass+'@'+config.db.host+'/'+config.db.db;
+app.use(orm.express(dbString, {
   define: function (db, models, next) {
     app.models.event = models.event = require('./model/event')(db);
     db.sync(next);
@@ -55,7 +57,7 @@ if ('development' == app.get('env')) {
 /**
  * Routing
  */
-var includes = {io: {}};
+var includes = {io: {}, config: config};
 routes.init(app, includes);
 
 var server = http.createServer(app).listen(app.get('port'), function(){

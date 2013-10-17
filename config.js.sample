@@ -1,0 +1,14 @@
+module.exports = {
+  port: 3000,
+  email: {
+    user: 'your@gmail',
+    pass: 'PASSWORD',
+    from: 'send emails from'
+  },
+  db: {
+    user: 'root',
+    pass: '',
+    host: 'localhost',
+    db:   'node'
+  }
+}
