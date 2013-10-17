@@ -1,6 +1,10 @@
 
 var Tracker = {
   update: function (number) {
-    $('#counter').text(number);
+    if (window.Flip === undefined) {
+      $('#counter').text(number);
+    } else {
+      Flip.update(number);
+    }
   }
 };

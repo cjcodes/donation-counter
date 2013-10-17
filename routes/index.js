@@ -5,6 +5,7 @@
 
 module.exports = {
   includes: null,
+  routes: ['field', 'present', 'event'],
 
   init: function (app, includes) {
     this.includes = includes;
@@ -19,8 +20,11 @@ module.exports = {
     app.post('/event/:id/field',  routes.field.post);
 
     app.get('/event/:id/present', routes.present.get);
-  },
 
-  routes: ['field', 'present']
+    app.get('/event/create',  routes.event.get);
+    app.post('/event/create', routes.event.post);
+
+    app.get('/event/:id', routes.event.show);
+  }
 };
 

@@ -1,6 +1,9 @@
 extends layout
 
+block append stylesheets
+  link(rel='stylesheet', href='/stylesheets/field.css', media='screen, projection', type='text/css')
+
 block content
-  img(src='http://www.crisistextline.org/wp-content/uploads/2013/02/logo-full-e1360871377775.png')
+  =title
   #counter
   input#updater(type='number')

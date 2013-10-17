@@ -1,0 +1,11 @@
+extends layout
+
+block append stylesheets
+
+block javascripts
+
+block content
+  form(method='post')
+    input(name='name')
+    input(type='date', name='date')
+    input(type='submit', value='Create Event')

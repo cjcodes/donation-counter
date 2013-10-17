@@ -1,0 +1,20 @@
+@import "compass";
+
+// voltaire, bubbler one, Dorsa, Graduate, Iceberg
+body {
+  background: #506DA3;
+  color: white;
+  font-family: 'Century Gothic';
+  font-size: 10em;
+}
+
+#counter {
+  span.digit {
+    display: inline-block;
+    width: .7em;
+    background: white;
+    color: black;
+    margin: .05em;
+    @include border-radius(.1em);
+  }
+}

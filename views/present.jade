@@ -1,4 +1,10 @@
 extends layout
 
+block append stylesheets
+  link(rel='stylesheet', href='/stylesheets/present.css', media='screen, projection', type='text/css')
+
+block append javascripts
+  script(src='/javascripts/lib/Flip.js')
+
 block content
   #counter

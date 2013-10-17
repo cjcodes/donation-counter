@@ -18,4 +18,7 @@ var scripts = [
 requirejs(scripts, function () {
   bindings.bind();
   SocketClient.init();
+  if (window.Flip !== undefined) {
+    Flip.init();
+  }
 });

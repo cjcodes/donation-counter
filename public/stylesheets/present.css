@@ -1,0 +1,21 @@
+/* line 4, ../sass/present.scss */
+body {
+  background: #506DA3;
+  color: white;
+  font-family: 'Century Gothic';
+  font-size: 10em;
+}
+
+/* line 12, ../sass/present.scss */
+#counter span.digit {
+  display: inline-block;
+  width: .7em;
+  background: white;
+  color: black;
+  margin: .05em;
+  -webkit-border-radius: 0.1em;
+  -moz-border-radius: 0.1em;
+  -ms-border-radius: 0.1em;
+  -o-border-radius: 0.1em;
+  border-radius: 0.1em;
+}
