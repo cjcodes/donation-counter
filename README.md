@@ -4,12 +4,7 @@ A node.js app that keeps track of an incrementing number of things.
 
 Installation
 ------------
-0. Install node
-1. Check out the repository
-2. install modules
-
-    npm install
-
-3. Start the app
-
-    node app
+1. Install node
+2. Check out the repository
+3. install modules: npm install
+4. Start the app: node app
