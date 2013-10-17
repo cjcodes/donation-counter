@@ -1,4 +1,14 @@
 /* line 4, ../sass/present.scss */
+body, html, div[role="main"] {
+  height: 100%;
+}
+
+/* line 6, ../sass/present.scss */
+div[role="main"] {
+  display: table;
+}
+
+/* line 10, ../sass/present.scss */
 body {
   background: #506DA3;
   color: white;
@@ -6,8 +16,14 @@ body {
   font-size: 10em;
 }
 
-/* line 12, ../sass/present.scss */
+/* line 17, ../sass/present.scss */
+#counter {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 21, ../sass/present.scss */
 #counter span.digit {
+  overflow: hidden;
   display: inline-block;
   width: .7em;
   background: white;

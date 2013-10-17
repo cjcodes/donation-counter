@@ -2,7 +2,7 @@ var Flip = {
   spans: [],
   goal: 0,
   current: 0,
-  timeout: 100,
+  timeout: 50,
   currentLength: 0,
 
   ips: 10,  // increment per time segment

@@ -1,6 +1,12 @@
 @import "compass";
 
 // voltaire, bubbler one, Dorsa, Graduate, Iceberg
+body,html,div[role="main"] { height: 100%; }
+
+div[role="main"] {
+  display: table;
+}
+
 body {
   background: #506DA3;
   color: white;
@@ -9,7 +15,11 @@ body {
 }
 
 #counter {
+  display: table-cell;
+  vertical-align: middle;
+
   span.digit {
+    overflow: hidden;
     display: inline-block;
     width: .7em;
     background: white;

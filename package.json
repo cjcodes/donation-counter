@@ -12,6 +12,7 @@
     "socket.io": "*",
     "mysql": "*",
     "orm": "*",
-    "numeral": "*"
+    "numeral": "*",
+    "nodemailer": "*"
   }
 }

@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -67,21 +70,115 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 7, ../sass/screen.scss */
+/* line 12, ../sass/screen.scss */
 body {
-  font-size: 4em;
   text-align: center;
+  font-size: 2em;
+  background: white;
+  font-family: Ubuntu;
+}
+@media screen and (max-width: 60em) {
+  /* line 12, ../sass/screen.scss */
+  body {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 40em) {
+  /* line 12, ../sass/screen.scss */
+  body {
+    font-size: 1em;
+  }
 }
 
-/* line 11, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 input {
-  font-size: 1em;
-  width: 90%;
+  font-size: 2em;
   text-align: center;
+  font-family: Raleway;
+  display: block;
+  margin: .5em auto;
+  width: 15em;
+  border: 3px solid #ccc;
+}
+@media screen and (max-width: 60em) {
+  /* line 25, ../sass/screen.scss */
+  input {
+    font-size: 1.2em;
+  }
+}
+/* line 36, ../sass/screen.scss */
+input[type="date"] {
+  text-transform: uppercase;
+}
+/* line 39, ../sass/screen.scss */
+input[type="submit"] {
+  border: none;
+  background: #73FB97;
+  padding: .5em;
+  cursor: pointer;
+}
+/* line 44, ../sass/screen.scss */
+input[type="submit"]:hover {
+  background: #41FB72;
 }
 
-/* line 17, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
+h1 {
+  font-family: 'Lato';
+  font-weight: 100;
+  font-size: 4em;
+  padding: .8em 25%;
+  text-indent: -.5em;
+  text-align: left;
+  color: white;
+  background: #0ac5f4;
+  text-transform: uppercase;
+}
+/* line 60, ../sass/screen.scss */
+h1.small {
+  font-size: 2em;
+}
+
+/* line 65, ../sass/screen.scss */
+h2 {
+  font-size: 2em;
+  background: white;
+  padding: .2em;
+}
+
+/* line 71, ../sass/screen.scss */
+h3 {
+  font-size: 3em;
+}
+
+/* line 75, ../sass/screen.scss */
 div[role="main"] {
   width: 100%;
   margin: 0 auto;
+}
+
+/* line 80, ../sass/screen.scss */
+.box-container {
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+/* line 85, ../sass/screen.scss */
+.box {
+  display: inline-block;
+  font-size: .5em;
+  padding: 0 1em 1em;
+  margin: 1em;
+  border: 3px solid #ccc;
+  width: 21em;
+  background: white;
+}
+@media screen and (max-width: 40em) {
+  /* line 85, ../sass/screen.scss */
+  .box {
+    font-size: 1em;
+    width: 90%;
+    margin: 1em 0;
+    padding: 1em 0;
+  }
 }

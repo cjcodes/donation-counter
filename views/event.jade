@@ -5,10 +5,16 @@ block append stylesheets
 block javascripts
 
 block content
-  h1 Event created!
+  h1 Event created
   h2= title
-  p For the folks collecting donations, send this link:
-  a(href=fieldLink)= fieldLink
-
-  p For the presentation screens, use this link:
-  a(href=presentLink)= presentLink
+  .box-container
+    .box
+      h3 Collect
+      img(src="/images/collect.png")
+      br
+      a(href=fieldLink)= fieldLink
+    .box
+      h3 Present
+      img(src="/images/present.png")
+      br
+      a(href=presentLink)= presentLink

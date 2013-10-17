@@ -1,4 +1,14 @@
 /* line 1, ../sass/field.scss */
+body {
+  font-size: 4em;
+}
+
+/* line 5, ../sass/field.scss */
+input {
+  width: 90%;
+}
+
+/* line 9, ../sass/field.scss */
 div[role="main"] {
   max-width: 5em;
 }

@@ -9,6 +9,7 @@ module.exports = {
 
   init: function (app, includes) {
     this.includes = includes;
+    this.includes.app = app;
     
     var routes = {};
 

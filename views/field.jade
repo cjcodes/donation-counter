@@ -1,9 +1,8 @@
 extends layout
 
 block append stylesheets
-  link(rel='stylesheet', href='/stylesheets/field.css', media='screen, projection', type='text/css')
 
 block content
-  =title
-  #counter
+  h1.small= title
+  h2#counter
   input#updater(type='number')

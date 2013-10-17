@@ -5,7 +5,10 @@ block append stylesheets
 block javascripts
 
 block content
+  h1 Create<br>Event
   form(method='post')
-    input(name='name')
+    input(name='name', placeholder="EVENT NAME")
+    input(type='email', name='email', placeholder="YOUR@EMAIL.COM")
+    input(name='background', placeholder='CSS BACKGROUND ATTRIBUTE')
     input(type='date', name='date')
-    input(type='submit', value='Create Event')
+    input(type='submit', value='CREATE EVENT')
