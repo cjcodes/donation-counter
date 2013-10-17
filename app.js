@@ -31,16 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // configure ORM and models
 app.models = {};
-var db_opts = {
-  host: config.db.host,
-  database: config.db.db,
-  protocol: 'mysql',
-  port: '3306',
-  user: config.db.user,
-  password: config.db.pass
-};
 
-app.use(orm.express(db_opts, {
+app.use(orm.express(config.db, {
   define: function (db, models, next) {
     app.models.event = models.event = require('./model/event')(db);
     db.sync(next);

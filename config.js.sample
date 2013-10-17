@@ -6,9 +6,11 @@ module.exports = {
     from: 'send emails from'
   },
   db: {
-    user: 'root',
-    pass: '',
-    host: 'localhost',
-    db:   'node'
+    user:       'root',
+    password:   '',
+    host:       'localhost',
+    database:   'node',
+    port:       '3306',
+    protocol:   'mysql'
   }
 }
