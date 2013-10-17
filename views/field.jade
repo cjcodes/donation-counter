@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  img(src='http://www.crisistextline.org/wp-content/uploads/2013/02/logo-full-e1360871377775.png')
+  #counter
+  input#updater(type='number')
+
+block append javascripts
+  script(type='text/javascript', src='/javascripts/require.js', data-main='/javascripts/app.js')
