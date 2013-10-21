@@ -24,6 +24,10 @@ var Flip = {
     var now  = (new Date).getTime() / this.timeout;
     var dps  = (number - this.goal) / (now - this.lastTimestamp);
 
+    if (number < this.goal) {
+      $('#counter span').hide().removeClass('showing');
+      this.currentLength = 0;
+    }
     this.goal = number;
 
     if (this.count > 0) {
