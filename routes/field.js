@@ -16,7 +16,12 @@ module.exports = function (includes) {
       var id = req.params.id;
 
       req.models.event.get(id, function (err, event) {
-        event.count += parseInt(req.body.val);
+        if (req.body.type == 'increment') {
+          event.count += parseInt(req.body.val);
+        } else {
+          event.count = parseInt(req.body.val);
+        }
+
         event.save(function (err) {
           res.send('success');
           includes.io.sockets.in(id).emit('update', includes.io.formatNumber(event.count));

@@ -1,13 +1,36 @@
 var bindings = {};
 
 bindings.bind = function () {
-  $('#updater').keypress(function (e) {
+  $('#incrementer').keypress(function (e) {
     var code = e.keyCode || e.which;
-    if(code == 13) {
+    if (code == 13) {
       var $this = $(this);
-      $.post(window.location.pathname, {val: $this.val()}, function (data) {
+      bindings.post('increment', $this.val(), function () {
         $this.val('');
       });
+    }
+  });
+
+  $('#updater').keypress(function (e) {
+    var code = e.keyCode || e.which;
+    if (code == 13) {
+      var $this = $(this);
+      bindings.post('set', $this.val(), function () {
+        $this.val('');
+      });
+    }
+  });
+};
+
+bindings.post = function (type, val, callback) {
+  var post = {
+    val: val,
+    type: type
+  };
+
+  $.post(window.location.pathname, post, function (data) {
+    if (typeof callback == 'function') {
+      callback(val);
     }
   });
 };
