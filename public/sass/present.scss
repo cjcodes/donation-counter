@@ -27,5 +27,6 @@ body {
     color: black;
     margin: .05em;
     @include border-radius(.1em);
+    padding-top: .1em;
   }
 }

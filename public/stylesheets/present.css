@@ -30,4 +30,5 @@ body {
   -ms-border-radius: 0.1em;
   -o-border-radius: 0.1em;
   border-radius: 0.1em;
+  padding-top: .1em;
 }
