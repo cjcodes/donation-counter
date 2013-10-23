@@ -9,6 +9,16 @@ block content
   form(method='post')
     input(name='name', placeholder="EVENT NAME")
     input(type='email', name='email', placeholder="YOUR@EMAIL.COM")
-    input(name='background', placeholder='CSS BACKGROUND ATTRIBUTE')
-    input(type='date', name='date')
+
+    p Background property
+    input(name='background', placeholder='url("path/to/image") or #FF00FF')
+
+    p Font Family
+    input(name='fontFamily', value="'Century Gothic'")
+
+    p Font Color
+    input(name='fontColor', value='black')
+
+    p Flip Color
+    input(name='flipColor', value='white')
     input(type='submit', value='CREATE EVENT')

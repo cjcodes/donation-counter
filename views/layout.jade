@@ -5,7 +5,11 @@ html
     block stylesheets
       link(rel='stylesheet', href='/stylesheets/screen.css', media='screen, projection', type='text/css')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  body(style="#{bodyStyle}")
+    style(type='text/css')
+      body { background: #{event.background}; font-family: #{event.fontFamily}; }
+      #counter span.digit { background: #{event.flipColor}; color: #{event.fontColor} }
+      #counter span.comma { color: #{event.flipColor}; }
+  body
     div(role="main")
       block content
       block javascripts
