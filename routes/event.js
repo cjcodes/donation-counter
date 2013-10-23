@@ -52,7 +52,6 @@ module.exports = function (includes) {
         }
         res.render('event', {
           title: event.name,
-          bodyStyle: 'background: ' + event.background,
           fieldLink: 'http://' + req.headers.host + '/event/' + event.id + '/field',
           presentLink: 'http://' + req.headers.host + '/event/' + event.id + '/present'
         });
