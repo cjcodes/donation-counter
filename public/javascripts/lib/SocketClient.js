@@ -5,8 +5,14 @@ var SocketClient = {
     this.socket.on('update', function (data) {
       Tracker.update(data);
     });
+    this.socket.on('toggle', function (data) {
+      Tracker.toggle(data);
+    });
   },
   send: function (data) {
     this.socket.emit('update', data);
+  },
+  pause: function () {
+    this.socket.emit('toggle');
   }
 };

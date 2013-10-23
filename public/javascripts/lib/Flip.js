@@ -4,6 +4,7 @@ var Flip = {
   current: 0,
   timeout: 50,
   currentLength: 0,
+  paused: false,
 
   ips: 10,  // increment per time segment
   count: 0, // number of increments registered
@@ -44,8 +45,10 @@ var Flip = {
 
   setContent: function () {
     if (this.current + this.ips < this.goal) {
-      this.current += this.ips;
-      this.populateDiv(this.current);
+      if (!this.paused) {
+        this.current += this.ips;
+        this.populateDiv(this.current);
+      }
 
       setTimeout(function () {
         Flip.setContent();

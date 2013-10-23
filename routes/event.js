@@ -12,7 +12,10 @@ module.exports = function (includes) {
         id: hash,
         name: req.body.name,
         count: 0,
-        background: req.body.background
+        background: req.body.background,
+        fontFamily: req.body.fontFamily,
+        fontColor: req.body.fontColor,
+        flipColor: req.body.flipColor
       }, function (event) {
         var transport = nodemailer.createTransport("SMTP", {
           service: "Gmail",

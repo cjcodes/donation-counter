@@ -4,7 +4,10 @@ module.exports = function (db) {
     id   : String,
     name : String,
     count: Number,
-    background: String
+    background:  String,
+    fontFamily: String,
+    fontColor:  String,
+    flipColor:  String
   }, {
   
   });

@@ -5,7 +5,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,50 +26,41 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 12, ../sass/screen.scss */
 body {
   text-align: center;
   font-size: 2em;
@@ -78,19 +68,16 @@ body {
   font-family: Ubuntu;
 }
 @media screen and (max-width: 60em) {
-  /* line 12, ../sass/screen.scss */
   body {
     font-size: 1.5em;
   }
 }
 @media screen and (max-width: 40em) {
-  /* line 12, ../sass/screen.scss */
   body {
     font-size: 1em;
   }
 }
 
-/* line 25, ../sass/screen.scss */
 input {
   font-size: 2em;
   text-align: center;
@@ -101,28 +88,23 @@ input {
   border: 3px solid #ccc;
 }
 @media screen and (max-width: 60em) {
-  /* line 25, ../sass/screen.scss */
   input {
     font-size: 1.2em;
   }
 }
-/* line 36, ../sass/screen.scss */
 input[type="date"] {
   text-transform: uppercase;
 }
-/* line 39, ../sass/screen.scss */
 input[type="submit"] {
   border: none;
   background: #73FB97;
   padding: .5em;
   cursor: pointer;
 }
-/* line 44, ../sass/screen.scss */
 input[type="submit"]:hover {
   background: #41FB72;
 }
 
-/* line 50, ../sass/screen.scss */
 h1 {
   font-family: 'Lato';
   font-weight: 100;
@@ -134,36 +116,30 @@ h1 {
   background: #0ac5f4;
   text-transform: uppercase;
 }
-/* line 60, ../sass/screen.scss */
 h1.small {
   font-size: 2em;
 }
 
-/* line 65, ../sass/screen.scss */
 h2 {
   font-size: 2em;
   background: white;
   padding: .2em;
 }
 
-/* line 71, ../sass/screen.scss */
 h3 {
   font-size: 3em;
 }
 
-/* line 75, ../sass/screen.scss */
 div[role="main"] {
   width: 100%;
   margin: 0 auto;
 }
 
-/* line 80, ../sass/screen.scss */
 .box-container {
   max-width: 40em;
   margin: 0 auto;
 }
 
-/* line 85, ../sass/screen.scss */
 .box {
   display: inline-block;
   font-size: .5em;
@@ -174,11 +150,14 @@ div[role="main"] {
   background: white;
 }
 @media screen and (max-width: 40em) {
-  /* line 85, ../sass/screen.scss */
   .box {
     font-size: 1em;
     width: 90%;
     margin: 1em 0;
     padding: 1em 0;
   }
+}
+
+p {
+  margin: 1em 1em -1em;
 }

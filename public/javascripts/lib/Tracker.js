@@ -6,5 +6,16 @@ var Tracker = {
     } else {
       Flip.update(number);
     }
+  },
+  toggle: function (paused) {
+    if (window.Flip === undefined) {
+      if (paused) {
+        $('#toggle').val('play');
+      } else {
+        $('#toggle').val('pause');
+      }
+    } else {
+      Flip.paused = paused;
+    }
   }
 };

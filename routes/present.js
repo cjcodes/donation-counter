@@ -9,7 +9,8 @@ module.exports = function (includes) {
           res.status(404).send('Not found');
           return;
         }
-        res.render('present', { title: event.name, bodyStyle: 'background: '+event.background });
+        
+        res.render('present', { title: event.name, event: event });
       });
     }
   }

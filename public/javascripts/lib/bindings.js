@@ -20,6 +20,10 @@ bindings.bind = function () {
       });
     }
   });
+
+  $('#toggle').click(function () {
+    SocketClient.pause();
+  });
 };
 
 bindings.post = function (type, val, callback) {
