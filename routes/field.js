@@ -14,6 +14,10 @@ module.exports = function (includes) {
     },
     post: function (req, res) {
       var id = req.params.id;
+      if (isNaN(parseInt(req.body.val))) {
+        res.send('fail');
+        return;
+      }
 
       req.models.event.get(id, function (err, event) {
         if (req.body.type == 'increment') {
